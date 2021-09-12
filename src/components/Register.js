@@ -14,7 +14,7 @@ export default function Register() {
     let handleSubmit = async (e) =>{
         e.preventDefault()
         console.log(username,password)
-        await axios.post(`https://fyz-money-manager.herokuapp.com//register`,{username,password})
+        await axios.post(`https://fyz-money-manager.herokuapp.com/register`,{username,password})
         history.push('/login')
     }
     let handleSignIn = async (e) =>{

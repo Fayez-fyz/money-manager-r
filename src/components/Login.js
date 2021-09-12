@@ -11,7 +11,7 @@ export default function Login() {
     let handleSubmit = async (e) =>{
         e.preventDefault()
         try {
-          let logindata = await axios.post(`https://fyz-money-manager.herokuapp.com//login`, { username, password })
+          let logindata = await axios.post(`https://fyz-money-manager.herokuapp.com/login`, { username, password })
           console.log(logindata)
           window.localStorage.setItem("app_token",logindata.data.token)
           history.push("/money")
